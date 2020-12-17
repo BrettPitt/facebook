@@ -5,15 +5,18 @@ else
     exit 1
 fi
 declare -a menue=(
-    "Funktion: Datenvorschau"
-    "Funktion: Datenanalyse"
+    "7.1 Preview"
+    "7.2 Datenanalyse"
 )
+
+
 
 # was sind die spalten?
 csvcut -n facebook.csv
 
-#inhalt "anzeigen"
+#inhalt "anzeigen" (2 varianten)
 csvlook facebook.csv | less -S
+head -n 10 facebook.csv |csvlook
 
 #das entspricht 7.1 -->  anzeigen der 3 sagen (status_type,status_link,status_published ) und pipen durch csvlook und head
 csvcut -c status_type,status_link,status_published facebook.csv | csvlook | head
