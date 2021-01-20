@@ -76,7 +76,7 @@ while true; do
         echo -e "\n=> ${MENU[3]}\n"
             echo "Meist bewerteter Kommentar"
             printf "\n"
-            mostLiked
+            mostLiked1
             printf "\n"
         ;;    
 
