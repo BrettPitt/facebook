@@ -1,16 +1,3 @@
-if dpkg -s csvkit 2>&1 ; then
-    echo "csvkit found"
-else
-    echo "csvkit not found"
-    exit 1
-fi
-declare -a menue=(
-    "7.1 Preview"
-    "7.2 Datenanalyse"
-)
-
-
-
 # was sind die spalten?
 csvcut -n facebook.csv
 
